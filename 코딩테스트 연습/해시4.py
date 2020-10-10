@@ -21,10 +21,9 @@ def solution(genres, plays):
             resultlist.append(hi2[1][0])
         except:
             print()
-        
     return resultlist
 
-    
+
 genres = ["classic", "pop", "classic", "classic", "pop", "jazz"]
 plays = [500, 600, 200, 200, 2500, 900]	
 solution(genres, plays)
