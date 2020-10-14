@@ -6,6 +6,7 @@ def solution(genres, plays):
     count = 1
     maxlist = []
     maxname = list(range(len(set(genres))))
+    resultlist = []
     
     for i in range(len(genres)):
         hashdic = {}
@@ -31,20 +32,26 @@ def solution(genres, plays):
             if dic[i]['max'] == val:
                 dic[i]['rank'] = idx+1
                 maxname[idx] = i
-                #del dic[i]['max']
+                
+
 
             
     print(maxstr, maxnum, maxidx)
     print(maxname)
 
-    for i in maxname:
-        for j in dic[i]:
+    for i, v in enumerate(maxname):
+        hi = sorted(dic[v].items(), key=lambda x: x[1], reverse=True)
+        resultlist.append(hi[0][0])
+        resultlist.append(hi[2][0])
+        if i == 1:
+            break
 
-
+    print(resultlist)
     print(dic)
+    return resultlist
 
-genres = ["classic", "pop", "classic", "classic", "pop"]
-plays = [500, 600, 150, 800, 2500]	
+genres = ["classic", "pop", "classic", "classic", "pop", "jazz"]
+plays = [500, 600, 150, 800, 2500, 900]	
 solution(genres, plays)
 
  
