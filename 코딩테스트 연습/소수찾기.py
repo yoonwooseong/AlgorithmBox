@@ -1,3 +1,4 @@
+# 에라토스테네스의 체
 def solution(n):
     distinguish = [False, False]+[True]*(n-1)
     m = int(n**0.5)
@@ -12,6 +13,7 @@ def solution(n):
 
 solution(5)
 '''
+
 def solution(n):
     num=set(range(2,n+1))
 
