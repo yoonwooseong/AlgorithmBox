@@ -1,4 +1,6 @@
 # 에라토스테네스의 체
+# n값까지 소수 몇개인지 판별할때 좋고
+# n이 소수인지만 판별할때는 그냥 for문 한번 O(n)이 좋다. - HR Day25 RunningTime and Complexity 참고
 def solution(n):
     distinguish = [False, False]+[True]*(n-1)
     m = int(n**0.5)
