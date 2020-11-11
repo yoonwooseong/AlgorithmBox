@@ -11,4 +11,5 @@
  
 ### 현재 활동
 
- - HackerRank의 30-day Challenge 중..
+ - HackerRank의 30-day Challenge..  -> 30/30 challenges solved
+ - Programmers coding test 푸는 
