@@ -12,4 +12,5 @@
 ### 현재 활동
 
  - HackerRank의 30-day Challenge..  -> 30/30 challenges solved
- - Programmers coding test 푸는 
+ - Programmers coding test
+ - HTTPS / SSL 인증 공부 : [링크](https://opentutorials.org/course/228/4894) 출처 : 생활코딩
