@@ -12,9 +12,11 @@ def solution(name):
     print(result)
     stack2 = list(name)
     while True:
-        stack2.pop()
-        if len(stack2) == 1:
-            break
+        try:
+            if sum(stack2) == 0:
+                break
+        except:
+            print()
         left = 1
         right = 1
         for i in range(len(name)):
@@ -28,9 +30,13 @@ def solution(name):
                 right += 1
         if left < right:
             result += left
+            idx -= left
         else:
             result += right
-        idx += 1
+            idx += right
+            print(idx)
+        print(stack2)
+        stack2[idx] == 0
         print(left, right)
     print(result)
     return result
