@@ -1,0 +1,4 @@
+-- 코드를 입력하세요
+
+SELECT EMPLOYEE_ID, (case when (count(*) > 1 and count(*) < 4) then '우수 사원' when count(*) > 3 then '최우수 사원' else '일반 사원' end) as '분류 상태', COUNT(*) as COUNT FROM SELLINGS GROUP BY EMPLOYEE_ID;
+
