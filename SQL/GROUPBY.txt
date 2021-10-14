@@ -1,0 +1,13 @@
+고양이와 개는 몇 마리 있을까
+SELECT ANIMAL_TYPE, count(*) as count FROM ANIMAL_INS GROUP BY ANIMAL_TYPE ORDER BY ANIMAL_TYPE;
+
+동명 동물 수 찾기
+SELECT NAME, COUNT(*) as COUNT FROM ANIMAL_INS WHERE name is not NULL GROUP BY NAME HAVING COUNT(*) >= 2 ORDER BY NAME;
+
+입양 시각 구하기(1)
+SELECT date_format(DATETIME,'%H') as HOUR , count(*) as count FROM ANIMAL_OUTS WHERE date_format(DATETIME,'%H') BETWEEN 9 AND 20 GROUP BY HOUR ORDER BY HOUR;
+
+입양 시각 구하기(2)
+SET @hour := -1;
+
+SELECT (@hour := @hour + 1) as HOUR ,(SELECT COUNT(*) FROM ANIMAL_OUTS WHERE HOUR(DATETIME) = @hour) as COUNT FROM ANIMAL_OUTS WHERE @hour < 23;
